@@ -1,0 +1,164 @@
+.datetime-picker {
+  flex-direction: row;
+  min-width: 100%;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 1rem;
+}
+
+.date-picker {
+  border: none;
+  width: 90%;
+}
+
+.dates {
+  table-layout: fixed;
+}
+
+.arrow,
+.month-year {
+  font-size: 18pt;
+}
+
+th:hover {
+  cursor: pointer;
+  user-select: none;
+}
+
+tr {
+  text-align: center;
+}
+
+th {
+  color: #6c757d;
+}
+
+th.this-month-cell {
+  color: black;
+}
+
+thead th:nth-child(4) {
+  padding: 0.8rem 0;
+}
+
+
+th:hover:not(.selected) {
+  background-color: #B6DBF8;
+}
+
+.selected {
+  /* background-color: #007BFF; */
+  background-color: #58A8FF;
+  color: #FFFFFF !important;
+}
+
+tr:hover,
+thead th:hover {
+  background-color: transparent !important;
+}
+
+thead th:hover {
+  cursor: default;
+}
+
+.month-navigator:active,
+.month-navigator:focus {
+  outline: 0px !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+}
+
+.month-year {
+  min-width: 50%;
+  text-align: center;
+}
+
+/* Times */
+.times {
+  max-width: 5.8rem;
+  max-height: 27rem;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  padding-right: 3px;
+  border: none;
+}
+
+.times .btn {
+  font-size: 1.1rem;
+  display: flex;
+  padding: 15px;
+  margin-bottom: 5%;
+}
+
+.btn:disabled {
+  background-color: #007BFF !important;
+}
+
+/* TODO Fix */
+.datetime-display {
+  /* left: 5%;
+  bottom: 15%; */
+  display: none;
+}
+
+@media (max-width: 576px) {}
+
+@media (max-width: 768px) {
+  .month-year {
+    font-size: 1.2rem;
+  }
+
+  .dates {
+    margin-bottom: 0;
+    font-size: smaller;
+    min-width: 100%;
+    padding: 0;
+  }
+
+  .dates th {
+    padding: 0.8rem 0;
+  }
+}
+
+@media (max-width: 992px) {}
+
+@media (max-width: 1200px) {
+  .card {
+    min-width: 100%;
+  }
+
+  thead th span {
+    display: none;
+  }
+
+  .dates {
+    margin-bottom: 0;
+    font-size: small;
+  }
+
+  .date-picker {
+    width: 100%;
+  }
+
+  .datetime-picker {
+    flex-direction: column;
+    max-height: none;
+  }
+
+  .times {
+    flex-direction: row !important;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    max-width: 100%;
+    min-height: 1rem !important;
+    padding-bottom: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .times .btn {
+    margin-bottom: 0;
+    margin-right: 1%;
+    font-size: medium;
+    padding: 8px;
+  }
+}
